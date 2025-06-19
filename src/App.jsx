@@ -37,7 +37,7 @@ function App() {
 
         {/* Logo */}
         <div className="logo-container">
-          <span className="logo-name">🛍️MahiStore</span>
+          <span className="logo-name">🛍️Hari-Store</span>
         </div>
 
         {/* Navigation links */}

@@ -28,17 +28,17 @@ function CartComponent() {
     setCouponCode(codeValue);
 
     switch (codeValue) {
-      case 'MAHI10':
+      case 'HARI10':
         setCouponDiscountPercentage(10);
-        toast.success('🎉 MAHI10 applied! 10% discount added.');
+        toast.success('🎉 HARI10 applied! 10% discount added.');
         break;
-      case 'MAHI20':
+      case 'HARI20':
         setCouponDiscountPercentage(20);
-        toast.success('🎉 MAHI20 applied! 20% discount added.');
+        toast.success('🎉 HARI20 applied! 20% discount added.');
         break;
-      case 'MAHI30':
+      case 'HARI30':
         setCouponDiscountPercentage(30);
-        toast.success('🎉 MAHI30 applied! 30% discount added.');
+        toast.success('🎉 HARI30 applied! 30% discount added.');
         break;
       default:
         toast.error('❌ Invalid Coupon Code!');
@@ -201,8 +201,8 @@ function CartComponent() {
             {paymentMethod === 'qr' && !paymentSuccessful && (
               <div className="qr-section">
                 <h4>Scan UPI QR to Pay ₹{finalAmount.toFixed(2)}</h4>
-                <QRCode value={`upi://pay?pa=7670849258@ybl&pn=MyStore&am=${finalAmount.toFixed(2)}&cu=INR`} />
-                <p>UPI ID: AvulaUmaMaheswari@ybl</p>
+                <QRCode value={`upi://pay?pa=9390091074@ybl&pn=MyStore&am=${finalAmount.toFixed(2)}&cu=INR`} />
+                <p>UPI ID: 9390091074@ybl</p>
                 <button onClick={handlePaymentSuccess} className="confirm-payment-btn">
                   ✅ I've Completed Payment
                 </button>

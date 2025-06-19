@@ -25,9 +25,9 @@ function AboutUs() {
   return (
     <div className="aboutus-wrapper">
       <section className="aboutus-hero">
-        <h1>About <span className="highlight">MahiiStore</span></h1>
+        <h1>About <span className="highlight">HariStore</span></h1>
         <p>
-          At MahiStore, we are redefining the way you shop for groceries by offering freshness,
+          At HariStore, we are redefining the way you shop for groceries by offering freshness,
           quality, and convenience all in one place. With a wide range of categories from
           farm-fresh produce to premium chocolates, we ensure only the best reaches your table.
         </p>
@@ -36,7 +36,7 @@ function AboutUs() {
       <section className="aboutus-founder">
         <h2>Meet Our Founder</h2>
         <p>
-          <strong>Ratan Sir</strong>, the visionary behind myStore, started this platform with a mission to transform
+          <strong>Ratan Sir</strong>, the visionary behind HariStore, started this platform with a mission to transform
           the traditional grocery experience into something smarter, faster, and more reliable.
         </p>
         <ul>
@@ -66,7 +66,7 @@ function AboutUs() {
           while supporting local communities and promoting healthy lifestyles.
         </p>
 
-        <h2>Why Choose NaniStore?</h2>
+        <h2>Why Choose HariStore?</h2>
         <ul>
           <li>✅ Handpicked, fresh, and quality-assured products</li>
           <li>✅ Transparent pricing with no hidden costs</li>
@@ -86,7 +86,7 @@ function AboutUs() {
       </section>
 
       <footer className="aboutus-footer">
-        <p>© 2025 MahiStore. Inspired by excellence. Built by vision.</p>
+        <p>© 2025 HariStore. Inspired by excellence. Built by vision.</p>
       </footer>
     </div>
   );

@@ -18,7 +18,7 @@ function Home() {
       {/* Hero Section */}
       <div className="hero-section">
         <h1 className="main-heading">
-          Welcome to <span className="highlight">MahiStore</span>
+          Welcome to <span className="highlight">Hari-Store</span>
         </h1>
         <p className="sub-text">
           Your trusted destination for groceries, essentials, and everyday products at the best prices!
@@ -122,12 +122,12 @@ function Home() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} <strong>MahiStore</strong>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <strong>Hari-Store</strong>. All rights reserved.</p>
           <p>
             <a href="/terms" className="footer-link">Terms of Service</a> |
             <a href="/privacy" className="footer-link"> Privacy Policy</a>
           </p>
-          <p>Designed & Developed by Avula Uma Maheswari</p>
+          <p>Designed & Developed by Haritha</p>
         </div>
       </footer>
     </div>
