@@ -1,0 +1,171 @@
+/* VEG LIST STYLES */
+
+.veg-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+    justify-content: center;
+}
+
+
+/* VEG CARD STYLES */
+
+.veg-card {
+    width: 240px;
+    border: 2px solid #ffeb3b;
+    /* bright yellow border */
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(255, 235, 59, 0.3);
+    /* subtle yellow shadow */
+    padding: 16px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #000;
+    /* black text */
+}
+
+.veg-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(255, 235, 59, 0.6);
+    /* stronger yellow shadow */
+    background-color: #fff9c4;
+    /* light yellow hover */
+}
+
+.veg-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.veg-card h3 {
+    font-size: 20px;
+    color: #000;
+    /* black */
+    margin: 10px 0 6px;
+}
+
+.veg-card p {
+    font-size: 16px;
+    color: #222;
+    /* dark black */
+    margin-bottom: 10px;
+}
+
+.veg-card button {
+    padding: 10px 16px;
+    background-color: #ffeb3b;
+    /* yellow button */
+    color: #000;
+    /* black text */
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.veg-card button:hover {
+    background-color: #fdd835;
+    /* darker yellow */
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(255, 235, 59, 0.5);
+}
+
+
+/* PRICE FILTER STYLES */
+
+.price-filter {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    /* black */
+}
+
+.price-filter label {
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 6px;
+    color: #000;
+    /* black */
+}
+
+.price-filter input[type="checkbox"] {
+    accent-color: #ffeb3b;
+    /* yellow checkboxes */
+    transform: scale(1.1);
+}
+
+.price-filter button {
+    margin-left: 15px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ffeb3b;
+    /* yellow */
+    color: #000;
+    /* black text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.price-filter button:hover {
+    background-color: #fdd835;
+    /* darker yellow */
+}
+
+
+/* PAGINATION STYLES */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    /* blue border */
+    background-color: #fff;
+    /* white background */
+    color: #007bff;
+    /* blue text */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination button:hover:not(.active-page):not(:disabled) {
+    background-color: #e0f0ff;
+    /* light blue background */
+    border-color: #0056b3;
+    color: #0056b3;
+}
+
+.pagination .active-page {
+    background-color: #007bff;
+    /* blue background */
+    color: white;
+    font-weight: bold;
+    border-color: #007bff;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

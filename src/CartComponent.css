@@ -1,0 +1,524 @@
+/* Container */
+
+.cart-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+
+/* Title */
+
+.cart-container h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+
+/* Headers & Items */
+
+.cart-header,
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 1.8fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease;
+}
+
+.cart-header {
+    background-color: #e7f0ff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #34495e;
+    user-select: none;
+}
+
+.cart-item {
+    background-color: #fafafa;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cart-item:hover {
+    background-color: #f0f8ff;
+}
+
+
+/* Image */
+
+.cart-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Product name & price */
+
+.cart-item>div:nth-child(2),
+.cart-item>div:nth-child(3),
+.cart-item>div:nth-child(5) {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+
+/* Quantity controls */
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.quantity-box button {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.quantity-box button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #3498db;
+}
+
+.quantity-box button:first-child {
+    background-color: #f9331d;
+}
+
+.quantity-box button:first-child:hover {
+    background-color: #f02913;
+}
+
+.quantity-box button:last-child {
+    background-color: #048439;
+}
+
+.quantity-box button:last-child:hover {
+    background-color: #1e8449;
+}
+
+.quantity-box span {
+    font-size: 1.1rem;
+    min-width: 22px;
+    text-align: center;
+}
+
+
+/* Remove button */
+
+.btn-remove {
+    background-color: #f9331d;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+
+/* Empty cart message */
+
+.empty-cart {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 40px 20px;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+
+/* Discounts and coupons */
+
+.discount-buttons,
+.coupon-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0 20px 0;
+    flex-wrap: wrap;
+}
+
+.discount-buttons button,
+.coupon-section button {
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.discount-buttons button {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.discount-buttons button:hover {
+    background-color: #1c5985;
+    transform: scale(1.05);
+}
+
+.coupon-section input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #bdc3c7;
+    font-size: 1rem;
+    width: 220px;
+    transition: border-color 0.3s ease;
+}
+
+.coupon-section input:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.4);
+}
+
+.coupon-section button {
+    background-color: #f39c12;
+    color: white;
+}
+
+.coupon-section button:hover {
+    background-color: #d68910;
+    transform: scale(1.05);
+}
+
+
+/* Summary and purchase button */
+
+.summary-section {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.complete-purchase-btn {
+    margin-top: 18px;
+    background-color: #27ae60;
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(39, 174, 96, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.complete-purchase-btn:hover {
+    background-color: #1e8449;
+    transform: scale(1.05);
+}
+
+.complete-purchase-btn:active {
+    background-color: #196934;
+    transform: scale(0.98);
+}
+
+
+/* Thank you message */
+
+.thank-you-message {
+    font-size: 2.5rem;
+    color: #27ae60;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 50px;
+    animation: popIn 1s ease forwards;
+}
+
+.redirect-message {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-top: 12px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.thank-you-message::after {
+    content: " 🎈🎉";
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+
+/* Animations */
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Card section (payment) */
+
+.card-section {
+    max-width: 420px;
+    margin: 30px auto 0;
+    padding: 30px 30px 35px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-section h4 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #34495e;
+    text-align: center;
+}
+
+.card-section input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1.8px solid #bdc3c7;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-section input:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
+}
+
+.confirm-payment-btn {
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 15px 0;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(39, 174, 96, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.confirm-payment-btn:hover {
+    background-color: #1e8449;
+    transform: scale(1.05);
+}
+
+.confirm-payment-btn:active {
+    background-color: #196934;
+    transform: scale(0.98);
+}
+
+
+/* Email input */
+
+.email-section {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.email-section input {
+    width: 60%;
+    max-width: 320px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1.8px solid #bdc3c7;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-section input:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .cart-container {
+        padding: 20px 18px;
+        margin: 25px 12px;
+    }
+    .cart-header,
+    .cart-item {
+        grid-template-columns: 70px 2fr 1fr 1fr 1fr 1fr;
+        padding: 12px 15px;
+    }
+    .cart-img {
+        width: 60px;
+        height: 60px;
+    }
+    .quantity-box button {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    .btn-remove {
+        padding: 7px 12px;
+        font-size: 0.95rem;
+    }
+    .discount-buttons button,
+    .coupon-section button {
+        padding: 10px 22px;
+        font-size: 0.95rem;
+    }
+    .coupon-section input {
+        width: 180px;
+    }
+    .summary-section {
+        font-size: 1.1rem;
+    }
+    .complete-purchase-btn {
+        padding: 14px 28px;
+        font-size: 1.05rem;
+    }
+    .card-section {
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+    .card-section input,
+    .email-section input {
+        width: 100%;
+    }
+    .confirm-payment-btn {
+        padding: 14px 0;
+        font-size: 1.05rem;
+    }
+    .email-section input {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-container {
+        padding: 18px 14px;
+        margin: 20px 10px;
+    }
+    .cart-header,
+    .cart-item {
+        grid-template-columns: 60px 2.5fr 1fr 1fr 1fr 1fr;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    .cart-img {
+        width: 50px;
+        height: 50px;
+    }
+    .quantity-box button {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+    }
+    .btn-remove {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .discount-buttons,
+    .coupon-section {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .discount-buttons button,
+    .coupon-section button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+    .coupon-section input {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .summary-section {
+        font-size: 1rem;
+    }
+    .complete-purchase-btn {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 0;
+    }
+    .card-section {
+        padding: 20px 18px;
+    }
+    .card-section input,
+    .email-section input {
+        font-size: 1rem;
+    }
+    .confirm-payment-btn {
+        font-size: 1.1rem;
+        padding: 14px 0;
+    }
+}
