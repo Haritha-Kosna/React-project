@@ -1,30 +1,30 @@
 import React, { useRef, useState } from 'react';
-import './contactus.css';
+import './contact.css';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
 function ContactUs() {
   const form = useRef();
-  const [dateTime, setDateTime] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setDateTime(new Date().toLocaleString());
+    setLoading(true);
 
-    setTimeout(() => {
-      emailjs.sendForm(
-        'service_p3hvfbf',
-        'template_8tkbszx',
-        form.current,
-        '2rTQ8uQLxGTl_XEnF'
-      ).then((result) => {
-        alert('Message sent successfully!');
-        form.current.reset();
-      }, (error) => {
-        alert('Failed to send the message. Try again later.');
-        console.error(error);
-      });
-    }, 100); // Give state time to update
+    emailjs.sendForm(
+      'service_p3hvfbf',
+      'template_8tkbszx',
+      form.current,
+      '2rTQ8uQLxGTl_XEnF'
+    ).then(() => {
+      alert('Message sent successfully!');
+      form.current.reset();
+    }, (error) => {
+      alert('Failed to send the message. Try again later.');
+      console.error(error);
+    }).finally(() => {
+      setLoading(false);
+    });
   };
 
   return (
@@ -62,9 +62,10 @@ function ContactUs() {
           <input type="text" name="from_name" placeholder="Enter your name" required />
           <input type="email" name="from_email" placeholder="Enter your email" required />
           <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-          {/* Hidden input for date-time */}
-          <input type="hidden" name="date_time" value={dateTime} />
-          <button type="submit">Send Message</button>
+          <input type="hidden" name="date_time" value={new Date().toLocaleString()} />
+          <button type="submit" disabled={loading}>
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </div>
     </div>

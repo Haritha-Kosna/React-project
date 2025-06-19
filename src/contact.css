@@ -76,6 +76,7 @@ form textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-family: inherit;
 }
 
 form button {
@@ -87,7 +88,6 @@ form button {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 form button:hover {
@@ -95,9 +95,7 @@ form button:hover {
 }
 
 
-/* ========================
-     Responsive Mobile Design
-     ======================== */
+/* Responsive Mobile Design */
 
 @media (max-width: 768px) {
     .contact-container {
